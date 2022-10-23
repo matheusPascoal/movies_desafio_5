@@ -13,3 +13,6 @@ class MovieEntity {
     required this.voteAverage,
   });
 }
+
+
+// FAZER UMA NOVA ENTITY PARA O MOVIE INFO.
