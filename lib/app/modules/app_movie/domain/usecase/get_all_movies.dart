@@ -5,6 +5,8 @@ import '../errors/errors.dart';
 import '../repositories/get_all_movies_repository.dart';
 
 abstract class IGetAllMoviesUsecase {
+  IGetAllMoviesUsecase(Object object);
+
   Future<Either<SystemError, List<MovieEntity>>> getAllMovies();
 }
 

@@ -1,5 +1,5 @@
-import '../../domain/entities/category_entity.dart';
+import '../../domain/entities/genre_entity.dart';
 
 abstract class FilterMoviesDatasource {
-  Future<Map<String, dynamic>> getFilteredMovies(CategoryEntity category);
+  Future<List<Map<String, dynamic>>> getFilteredMovies(GenreEntity category);
 }

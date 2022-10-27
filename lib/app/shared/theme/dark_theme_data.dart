@@ -3,8 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 class DarkThemeData {
   DarkThemeData._();
-  static const _backgroundColor1 = Color(0XFF050608);
-  static const _backgroundColor2 = Color(0XFF1E1E1E);
+  static const _backgroundColor1 = Color(0XFF161D31);
+  static const _backgroundColor2 = Color(0XFF222222);
   static const _progressColor = Color(0XFFFFFFFF);
 
   static const _textColor1 = Color(0XFFFFFFFF);
@@ -15,7 +15,7 @@ class DarkThemeData {
   static ThemeData theme() {
     return ThemeData(
       backgroundColor: _backgroundColor1,
-      colorSchemeSeed: _backgroundColor2,
+      canvasColor: _backgroundColor2,
       progressIndicatorTheme: const ProgressIndicatorThemeData(
         color: _progressColor,
       ),

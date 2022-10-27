@@ -9,8 +9,8 @@ class SplashModule extends Module {
   @override
   final List<ModularRoute> routes = [
     ChildRoute(
-      Modular.initialRoute,
-      child: (_, args) => const SplashPage(),
+      '/',
+      child: (context, args) => const SplashPage(),
     ),
   ];
 }

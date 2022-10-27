@@ -1,3 +1,3 @@
 abstract class InfoMoviesDatasource {
-  Future<Map<String, dynamic>> getMovieInfo(int id);
+  Future<List<Map<String, dynamic>>> getMovieInfo(int id);
 }

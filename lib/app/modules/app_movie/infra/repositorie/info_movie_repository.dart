@@ -11,11 +11,11 @@ class GetInfoMovie implements IGetInfoMovieRepository {
   GetInfoMovie(this.datasource);
 
   @override
-  Future<Either<SystemError, MovieEntity>> getMovieInfo(int id) async {
+  Future<Either<SystemError, MovieEntity>> getMovieInfo(id) async {
     try {
-      final map = await datasource.getMovieInfo(id);
-
-      return Right(MovieMapper.fromMap(map));
+      final response = await datasource.getMovieInfo(id);
+      final result = response;
+      return Right(result);
     } on SystemError catch (e) {
       return Left(e);
     }

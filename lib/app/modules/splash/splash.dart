@@ -1,8 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 
 import '../app_movie/presenter/search_page/page/search_movies.dart';
+import 'utils/image_logo.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({
@@ -17,29 +19,21 @@ class _SplashScreenState extends State<SplashPage> {
   @override
   void initState() {
     super.initState();
-    Timer(
-      const Duration(seconds: 3),
-      (() {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const SearchMovies(),
-          ),
-        );
-      }),
-    );
+    timeSplash();
+  }
+
+  void timeSplash() {
+    Future.delayed(const Duration(seconds: 3))
+        .then((value) => Modular.to.pushReplacementNamed('/search/'));
   }
 
   @override
   Widget build(BuildContext context) {
     final themeApp = Theme.of(context);
     return Scaffold(
-      backgroundColor: themeApp.backgroundColor,
-      body: const Center(
-        child: Icon(Icons.movie)
-        //  Image.asset(ImagesApp.logo),
-        ,
-      ),
-    );
+        backgroundColor: themeApp.canvasColor,
+        body: Center(
+          child: Image.network(LogoUrl.urlImageLogo),
+        ));
   }
 }

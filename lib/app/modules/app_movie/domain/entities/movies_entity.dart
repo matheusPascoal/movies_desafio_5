@@ -1,5 +1,5 @@
 class MovieEntity {
-  final String id;
+  final int id;
   final String name;
   final String imagePath;
   final String accent;
@@ -13,6 +13,3 @@ class MovieEntity {
     required this.voteAverage,
   });
 }
-
-
-// FAZER UMA NOVA ENTITY PARA O MOVIE INFO.

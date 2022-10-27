@@ -6,10 +6,10 @@ class MovieMapper {
   static MovieEntity fromMap(Map<String, dynamic> map) {
     return MovieEntity(
       id: map['id'],
-      accent: map['accent'],
-      imagePath: map['imagePath'],
-      voteAverage: map['favorite'],
       name: map['name'],
+      accent: map['accent'],
+      imagePath: map['image_path'],
+      voteAverage: map['vote_average'],
     );
   }
 }
